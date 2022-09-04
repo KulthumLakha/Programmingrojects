@@ -1,0 +1,81 @@
+# Kulthum Lakha kyl0029
+# CSCE 3600.002
+# 11/27/2021
+# Python program that allows users to search for entries using the city or zip code. 
+
+# shebang for python script
+#! /usr/bin/env python
+
+
+# Function that processes file and returns two dictionaries
+def load_records(filename):
+
+	# Declare objects
+	result = []		# List of string tuples
+	zip2list = {}		# Dictionary that maps zipcodes to list of string tuples
+	city2zip = {}		# Dictionary that maps cities to sets of zipcodes
+
+	# Open file and read line by line
+	# For each line, split line into strings separated by tabs to create a tuple
+	# Append tuple to the list
+    	for line in open(filename):
+		result.append(tuple(line.strip().split("\t")))
+
+	# For each tuple in the list		
+	for i in range(len(result)):
+		city = result[i][2]				# Get city
+		zipcode = result[i][3]				# Get zipcode
+		zip2list.update({zipcode:result[i]})		# Add mapping of the zipcode to the tuple in the dictionary
+		if (city in city2zip.keys()):			# Add mapping of the city to the set of zipcode
+			city2zip[city].append(zipcode)			# One to many mapping
+		else:
+			city2zip[city] = [zipcode]		
+			
+	# Return the two dictionaries
+	return zip2list, city2zip
+	
+
+# Main function 
+def main():
+
+	# Call load_records function to read file once
+	zip2list, city2zip = load_records("minor5.tsv")
+
+	# Loop until user enters "quit"
+	while(True):
+		
+		# Prompt user for input and save it as variable input
+		input = raw_input("\nEnter input: ")
+
+		# If user has entered "quit", return false to end the program
+		if input == "quit":
+			return False
+
+		# Check if input is a number
+		try:
+			x = int(input)
+
+			# If input is a number and if it is a key in zip2list, print the corresponding data
+			if zip2list.has_key(input):
+				print (zip2list[input][1])
+				print ("{}, {}, {}".format(zip2list[input][2],zip2list[input][0],zip2list[input][3]))
+			# else
+			else:
+				print ("No records found in this zip code.")
+
+		# If input is not a number (It is a string)
+		except ValueError:
+
+			# if it is a key in city2zip, print the corresponding data
+			if city2zip.has_key(input):
+				zipcodes = city2zip[input]		# List of zipcodes that are in city "input"
+				for z in zipcodes:
+					print (zip2list[z][1])
+					print ("{}, {}, {}".format(zip2list[z][2],zip2list[z][0],zip2list[z][3]))	
+			#else		
+			else:
+				print ("No records found in this city.")
+
+
+# Call main function
+main()
