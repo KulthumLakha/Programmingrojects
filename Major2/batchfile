@@ -1,0 +1,7 @@
+ls
+ls -l
+myhistory
+cd; ls -t; mkdir media; ls;
+;;
+ls; whoami; cd 3600; ls;
+pwd; exit; ls;
