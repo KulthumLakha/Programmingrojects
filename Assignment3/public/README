@@ -1,7 +1,11 @@
-Use the following command to compile:
+Program Description: Implementation of an AVL tree 
+                     Assignment for an algorithm class.
 
-$ g++ -std=c++0x avl.cpp
+Author: Kulthum Lakha
 
-Use the following command to test:
-
-./a.out test_cases/input1.txt
+Files: avl.cpp – AVL tree implementation
+       avl.hpp -AVL tree header file
+  
+Compilation: $ g++ -std=c++0x avl.cpp
+             
+Run: $ ./a.out test_cases/input1.txt
