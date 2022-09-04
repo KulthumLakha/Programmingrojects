@@ -1,8 +1,7 @@
-Description: Program to implement red-black trees using python
-Author: Kulthum Lakha ~kyl0029
+Program Description: Program to implement red-black trees using python
+
+Author: Kulthum Lakha
+
 Programming Language: Python 
+
 Run: python RBT.py
-
-
-
-
