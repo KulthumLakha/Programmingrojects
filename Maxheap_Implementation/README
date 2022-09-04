@@ -1,0 +1,13 @@
+Program Description: Implementation of a max heap
+                     Assignment for an algorithm class.
+
+Author: Kulthum Lakha
+
+Files: avl.cpp – Max Heap implementation
+       avl.hpp - Max Heap header file
+       demo.cpp - File to test implementation
+       inputs - Sample inputs
+       
+Compilation: $ g++ -o heapsort demo.cpp maxheap.cpp 
+             
+Run: $ ./heapsort inputs/input.10.1

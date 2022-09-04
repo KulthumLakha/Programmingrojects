@@ -1,0 +1,7 @@
+Program Description: This program uses condition variables to ensure nothing is added when the shared buffer between 2 threads
+                     is full and nothing is echoed to the screen when the shared buffer between 2 threads is empty.
+                     minor3.c - using producer-consumer paradigm.
+                     Assignment for a systems programming class.
+
+Author: Kulthum Lakha
+

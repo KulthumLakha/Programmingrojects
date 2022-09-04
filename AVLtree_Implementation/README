@@ -1,0 +1,12 @@
+Program Description: Implementation of an AVL tree 
+                     Assignment for an algorithm class.
+
+Author: Kulthum Lakha
+
+Files: avl.cpp – AVL tree implementation
+       avl.hpp - AVL tree header file
+       input1.txt - Sample input
+  
+Compilation: $ g++ -std=c++0x avl.cpp
+             
+Run: $ ./a.out test_cases/input1.txt

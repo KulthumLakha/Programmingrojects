@@ -1,0 +1,21 @@
+Program Description: Implementation of a stack to balance parenthesis, evaluate postfix expressions and transform infix expressions into postfix expressions.
+                     Assignment for an algorithm class.
+	
+
+Author: Kulthum Lakha
+	
+
+Files: balancing.cpp - Main method to check whether an expression is balanced
+	 infix2postfix.cpp - Main method to transform an infix expression into postfix
+       input_balanced.txt - Test cases for balancing.cpp
+       input_infix2postfix.txt - Test cases for infixtopostfix.cpp
+       input_postfixEval.txt - Test cases for postfixEval.cpp
+       postfixEval.cpp - Main method to evaluate postfix expressions
+       stack.cpp - Stack implementation
+       stack.hpp - Stack header file
+	  
+Compilation: $ g++ stack.cpp balancing.cpp
+             $ g++ stack.cpp postfixEval.cpp
+             $ g++ stack.cpp infixtopostfix.cpp
+	             
+Run: $ ./a.out

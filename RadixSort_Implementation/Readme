@@ -1,0 +1,9 @@
+Program Description: Implementation of radix sort
+                     Assignment for an algorithm class.
+
+Author: Kulthum Lakha
+
+compilation: g++ -o radixsort Lakha.cpp
+
+run: ./radixsort 2
+     ("2" above can be replaced by 8, 10 or 16)

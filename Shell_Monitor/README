@@ -1,0 +1,5 @@
+Program Description: A bash script that monitors who logs in and logs out of the 
+                     UNT CSE Linux machine (e.g., cse01) where the script was running.
+                     Assignment for a systems programming class.
+
+Author: Kulthum Lakha
